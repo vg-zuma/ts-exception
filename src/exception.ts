@@ -1,4 +1,4 @@
-import { HttpStatusCode } from "axios";
+import { HttpStatusCode } from "./statusCodes";
 
 export interface TsError extends Error {
   errorCode: HttpStatusCode;
