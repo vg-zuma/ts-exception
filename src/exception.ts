@@ -30,3 +30,15 @@ export class TsException extends Error implements TsError {
     return JSON.stringify(info);
   }
 }
+
+export class BadRequestException extends TsException {
+  constructor(message: string = 'Bad Request') {
+    super(message, HttpStatusCode.BadRequest);
+  }
+}
+
+export class InternalServerErrorException extends TsException {
+  constructor(message: string = 'Internal Server Error') {
+    super(message, HttpStatusCode.InternalServerError);
+  }
+}
